@@ -1,0 +1,23 @@
+module inclTtDecays = TtDecayChannelFilter
+{
+	  InputTag src = genParticleCandidates
+
+	#---------------------------------------
+	# select channel corresponding to No of
+	# leptons in the event:   0    hadronic 
+	#                         1    leptonic
+	#                         2 di-leptonic
+	#---------------------------------------
+	  int32 chn = 1   
+ 	  bool  invert_chn = false  
+
+	#---------------------------------------
+	# select sub-channel for lepton channels
+	# in the order {electron, muon, tau}:
+	#  0 (di-)lepton channel ignored
+	#  1 (di-)lepton channel recognized 
+	#---------------------------------------
+	  bool   enable_subchn = true
+ 	  bool   invert_subchn = false
+ 	  vint32 subchn = {1,1,0}
+}
