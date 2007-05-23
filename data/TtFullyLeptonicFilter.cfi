@@ -1,4 +1,4 @@
-module inclTtDecays = TtDecayChannelFilter
+module ttFullyLeptonicFilter = TtDecayChannelFilter
 {
 	  InputTag src = genParticleCandidates
 
@@ -8,7 +8,7 @@ module inclTtDecays = TtDecayChannelFilter
 	#                         1    leptonic
 	#                         2 di-leptonic
 	#---------------------------------------
-	  int32 chn = 1   
+	  int32 chn = 2
  	  bool  invert_chn = false  
 
 	#---------------------------------------
@@ -17,7 +17,7 @@ module inclTtDecays = TtDecayChannelFilter
 	#  0 (di-)lepton channel ignored
 	#  1 (di-)lepton channel recognized 
 	#---------------------------------------
-	  bool   enable_subchn = true
+	  bool   enable_subchn = false
  	  bool   invert_subchn = false
  	  vint32 subchn = {1,1,0}
 }
