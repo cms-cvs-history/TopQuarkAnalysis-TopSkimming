@@ -3,21 +3,23 @@ module ttFullyHadronicFilter = TtDecayChannelFilter
 	  InputTag src = genParticleCandidates
 
 	#---------------------------------------
-	# select channel corresponding to No of
-	# leptons in the event:   0    hadronic 
-	#                         1    leptonic
-	#                         2 di-leptonic
+	# select channels of consideration with 
+	# one lepton, in order: {elec,muon,tau}:
+	#
+	# CAUION: one of the two channel vectors 
+	#         has to be set to (0,0,0)
 	#---------------------------------------
-	  int32 chn = 0
- 	  bool  invert_chn = false  
+ 	  vint32 one_lepton_channels = {0,0,0}
 
 	#---------------------------------------
-	# select sub-channel for lepton channels
-	# in the order {electron, muon, tau}:
-	#  0 (di-)lepton channel ignored
-	#  1 (di-)lepton channel recognized 
+	# select channels of consideration with 
+	# two leptons,in order: {elec,muon,tau}:
+	#
+	# CAUION: one of the two channel vectors 
+	#         has to be set to (0,0,0)
 	#---------------------------------------
-	  bool   enable_subchn = false
- 	  bool   invert_subchn = false
- 	  vint32 subchn = {1,1,0}
+ 	  vint32 two_lepton_channels = {0,0,0}
+
+	# invert selection?
+ 	  bool   invert = false
 }
