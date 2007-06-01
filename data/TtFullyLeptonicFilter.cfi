@@ -3,22 +3,11 @@ module ttFullyLeptonicFilter = TtDecayChannelFilter
 	  InputTag src = genParticleCandidates
 
 	#---------------------------------------
-	# select channels of consideration with 
-	# one lepton, in order: {elec,muon,tau}:
-	#
-	# CAUION: one of the two channel vectors 
-	#         has to be set to (0,0,0)
+	# select channels of consideration in 
+	# order: (elec,muon,tau)
 	#---------------------------------------
- 	  vint32 one_lepton_channels = {0,0,0}
-
-	#---------------------------------------
-	# select channels of consideration with 
-	# two leptons,in order: {elec,muon,tau}:
-	#
-	# CAUION: one of the two channel vectors 
-	#         has to be set to (0,0,0)
-	#---------------------------------------
- 	  vint32 two_lepton_channels = {1,1,0}
+ 	  vint32 channel_1 = {1,1,0}
+ 	  vint32 channel_2 = {1,1,0}
 
 	# invert selection?
  	  bool   invert = false
