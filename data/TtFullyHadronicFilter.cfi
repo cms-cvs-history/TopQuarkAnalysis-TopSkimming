@@ -3,8 +3,9 @@ module ttFullyHadronicFilter = TtDecayChannelFilter
 	  InputTag src = genParticleCandidates
 
 	#---------------------------------------
-	# select channels of consideration in 
-	# order: (elec,muon,tau)
+	# allowed families for first (channel_1)
+	# and/or second (channel_2) lepton. In 
+        # order: (elec,muon,tau)
 	#---------------------------------------
  	  vint32 channel_1 = {0,0,0}
  	  vint32 channel_2 = {0,0,0}
