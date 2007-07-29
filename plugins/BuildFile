@@ -1,7 +1,14 @@
+<use name=FWCore/Framework>
+<use name=FWCore/ParameterSet>
+
 <library file=TtDecayChannelFilter.cc>
-  <use name=FWCore/Framework>
-  <use name=FWCore/ParameterSet>
   <use name=DataFormats/Candidate>
   <use name=DataFormats/HepMCCandidate>
   <use name=TopQuarkAnalysis/TopSkimming>
 </library>
+
+<library file=PtMinElectronCountFilter.cc>
+  <use name=PhysicsTools/UtilAlgos>
+  <use name=DataFormats/EgammaCandidates>
+</library>
+

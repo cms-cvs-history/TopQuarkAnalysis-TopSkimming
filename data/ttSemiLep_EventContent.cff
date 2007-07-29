@@ -1,0 +1,39 @@
+
+block ttSemiLepEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+block ttSemiLepTrackPlusJetsEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "ttSemiLepTrackPlusJetsPath"
+    }
+  }
+}
+
+block ttSemiLepElectronPlusJetsEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "ttSemiLepElectronPlusJetsPath"
+    }
+  }
+}
+
+block ttSemiLepMuonPlusJetsEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "ttSemiLepMuonPlusJetsPath"
+    }
+  }
+}
+
+block ttSemiLepEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+//      "ttSemiLepTrackPlusJetsPath",
+      "ttSemiLepElectronPlusJetsPath",
+      "ttSemiLepMuonPlusJetsPath"
+    }
+  }
+}
