@@ -1,0 +1,10 @@
+include "Configuration/EventContent/data/EventContent.cff"
+include "TopQuarkAnalysis/TopSkimming/data/topSemiLep_EventContent.cff"
+
+block topSemiLepAODSIMEventContent = {
+  untracked vstring outputCommands = { 
+  }
+}
+
+replace topSemiLepAODSIMEventContent.outputCommands += AODSIMEventContent.outputCommands
+replace topSemiLepAODSIMEventContent.outputCommands += topSemiLepEventContent.outputCommands

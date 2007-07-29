@@ -1,6 +1,0 @@
-
-include "TopQuarkAnalysis/TopSkimming/data/ttSemiLep_Sequences.cff"
-
-//path ttSemiLepTrackPlusJetsPath    = { ttSemiLepTrackPlusJets }
-path ttSemiLepElectronPlusJetsPath = { ttSemiLepElectronPlusJets }
-path ttSemiLepMuonPlusJetsPath     = { ttSemiLepMuonPlusJets }
