@@ -1,39 +1,39 @@
 
-block ttSemiLepEventContent = {
+block topSemiLepEventContent = {
   untracked vstring outputCommands = {
   }
 }
 
-block ttSemiLepTrackPlusJetsEventSelection = {
+block topSemiLepTrackPlusJetsEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "ttSemiLepTrackPlusJetsPath"
+      "topSemiLepTrackPlusJetsPath"
     }
   }
 }
 
-block ttSemiLepElectronPlusJetsEventSelection = {
+block topSemiLepElectronPlusJetsEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "ttSemiLepElectronPlusJetsPath"
+      "topSemiLepElectronPlusJetsPath"
     }
   }
 }
 
-block ttSemiLepMuonPlusJetsEventSelection = {
+block topSemiLepMuonPlusJetsEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "ttSemiLepMuonPlusJetsPath"
+      "topSemiLepMuonPlusJetsPath"
     }
   }
 }
 
-block ttSemiLepEventSelection = {
+block topSemiLepEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-//      "ttSemiLepTrackPlusJetsPath",
-      "ttSemiLepElectronPlusJetsPath",
-      "ttSemiLepMuonPlusJetsPath"
+//      "topSemiLepTrackPlusJetsPath",
+      "topSemiLepElectronPlusJetsPath",
+      "topSemiLepMuonPlusJetsPath"
     }
   }
 }

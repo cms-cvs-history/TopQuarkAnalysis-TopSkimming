@@ -24,6 +24,6 @@ module jetsFilter = EtMinCaloJetCountFilter {
   double etMin = 15.
 }
 
-sequence ttSemiLepTrackPlusJets    = { jetsFilter & trackFilter }
-sequence ttSemiLepElectronPlusJets = { jetsFilter & electronFilter }
-sequence ttSemiLepMuonPlusJets     = { jetsFilter & muonFilter }
+sequence topSemiLepTrackPlusJets    = { jetsFilter & trackFilter }
+sequence topSemiLepElectronPlusJets = { jetsFilter & electronFilter }
+sequence topSemiLepMuonPlusJets     = { jetsFilter & muonFilter }
