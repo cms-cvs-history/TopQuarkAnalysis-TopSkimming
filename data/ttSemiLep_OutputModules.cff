@@ -1,0 +1,42 @@
+include "TopQuarkAnalysis/TopSkimming/data/ttSemiLep_AODSIMEventContent.cff"
+
+module ttSemiLepTrackPlusJetsOutputModule = PoolOutputModule {
+  untracked string fileName = "ttSemiLepTrackPlusJets.root"
+  using ttSemiLepAODSIMEventContent
+  using ttSemiLepTrackPlusJetsEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "ttSemiLepTrackPlusJets"
+  }
+}
+
+module ttSemiLepElectronPlusJetsOutputModule = PoolOutputModule {
+  untracked string fileName = "ttSemiLepElectronPlusJets.root"
+  using ttSemiLepAODSIMEventContent
+  using ttSemiLepElectronPlusJetsEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "ttSemiLepElectronPlusJets"
+  }
+}
+
+module ttSemiLepMuonPlusJetsOutputModule = PoolOutputModule {
+  untracked string fileName = "ttSemiLepMuonPlusJets.root"
+  using ttSemiLepAODSIMEventContent
+  using ttSemiLepMuonPlusJetsEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "ttSemiLepMuonPlusJets"
+  }
+}
+
+module ttSemiLepOutputModule = PoolOutputModule {
+  untracked string fileName = "ttSemiLep.root"
+  using ttSemiLepAODSIMEventContent
+  using ttSemiLepEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "ttSemiLep"
+  }
+}
+

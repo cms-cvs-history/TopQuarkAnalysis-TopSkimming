@@ -1,0 +1,29 @@
+
+// WATCH OUT: no isolation!
+module trackFilter = PtMinTrackCountFilter {
+  InputTag src = ctfWithMaterialTracks
+  uint32 minNumber = 1
+  double ptMin = 20.
+}
+
+module electronFilter = PtMinElectronCountFilter {
+  InputTag src = pixelMatchGsfElectrons
+  uint32 minNumber = 1
+  double ptMin = 20.
+}
+
+module muonFilter = PtMinMuonCountFilter {
+  InputTag src = muons
+  uint32 minNumber = 1
+  double ptMin = 20.
+}
+
+module jetsFilter = EtMinCaloJetCountFilter {
+  InputTag src = iterativeCone5CaloJets
+  uint32 minNumber = 3
+  double etMin = 15.
+}
+
+sequence ttSemiLepTrackPlusJets    = { jetsFilter & trackFilter }
+sequence ttSemiLepElectronPlusJets = { jetsFilter & electronFilter }
+sequence ttSemiLepMuonPlusJets     = { jetsFilter & muonFilter }
