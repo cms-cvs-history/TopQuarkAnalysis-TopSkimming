@@ -7,8 +7,8 @@
   <use name=TopQuarkAnalysis/TopSkimming>
 </library>
 
-<library file=PtMinElectronCountFilter.cc>
-  <use name=PhysicsTools/UtilAlgos>
-  <use name=DataFormats/EgammaCandidates>
-</library>
+#<library file=PtMinElectronCountFilter.cc>
+#  <use name=PhysicsTools/UtilAlgos>
+#  <use name=DataFormats/EgammaCandidates>
+#</library>
 
