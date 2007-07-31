@@ -1,0 +1,13 @@
+block topDiLeptonEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+block topDiLeptonEventSelection = {
+  untracked PSet SelectEvents = {
+      vstring SelectEvents = {
+        "topDiLeptonPath"
+      }
+  }
+}
+
