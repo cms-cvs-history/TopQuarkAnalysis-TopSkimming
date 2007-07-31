@@ -12,28 +12,53 @@ block topSemiLepTrackPlusJetsEventSelection = {
   }
 }
 
-block topSemiLepElectronPlusJetsEventSelection = {
+block topSemiLepElectronPlus1JetEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "topSemiLepElectronPlusJetsPath"
+      "topSemiLepElectronPlus1JetPath"
     }
   }
 }
 
-block topSemiLepMuonPlusJetsEventSelection = {
+block topSemiLepMuonPlus1JetEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "topSemiLepMuonPlusJetsPath"
+      "topSemiLepMuonPlus1JetPath"
     }
   }
 }
 
-block topSemiLepEventSelection = {
+block topSemiLepElectronPlus2JetsEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-//      "topSemiLepTrackPlusJetsPath",
-      "topSemiLepElectronPlusJetsPath",
-      "topSemiLepMuonPlusJetsPath"
+      "topSemiLepElectronPlus2JetsPath"
+    }
+  }
+}
+
+block topSemiLepMuonPlus2JetsEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "topSemiLepMuonPlus2JetsPath"
+    }
+  }
+}
+
+
+block topSemiLep1JetEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "topSemiLepElectronPlus1JetPath",
+      "topSemiLepMuonPlus1JetPath"
+    }
+  }
+}
+
+block topSemiLep2JetsEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "topSemiLepElectronPlus2JetsPath",
+      "topSemiLepMuonPlus2JetsPath"
     }
   }
 }
