@@ -1,0 +1,2 @@
+include "TopQuarkAnalysis/TopSkimming/data/topDiLeptonFilter.cfi"
+path topDiLeptonPath = { topDiLeptonFilter }

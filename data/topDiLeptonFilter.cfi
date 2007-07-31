@@ -1,0 +1,6 @@
+module topDiLeptonFilter = TopDiLeptonFilter
+{
+   InputTag muonCollection = globalMuons
+   InputTag electronCollection = pixelMatchGsfElectrons
+   double ptThreshold = 20
+}
