@@ -1,0 +1,12 @@
+
+include "TopQuarkAnalysis/TopSkimming/data/topDiLepton_AODSIMEventContent.cff"
+
+module topDiLeptonOutputModule = PoolOutputModule {
+  untracked string fileName = "topDiLepton.root"
+  using topDiLeptonAODSIMEventContent
+  using topDiLeptonEventSelection
+  untracked PSet datasets ={
+    untracked string dataTier = "USER"
+    untracked string filterName = "topDiLepton"
+  }
+}

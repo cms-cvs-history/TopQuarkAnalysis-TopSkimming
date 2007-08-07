@@ -1,2 +1,0 @@
-include "TopQuarkAnalysis/TopSkimming/data/topLeptonTauFilter.cfi"
-path topLeptonTauPath = { topLeptonTauFilter }

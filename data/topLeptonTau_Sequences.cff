@@ -43,3 +43,6 @@ module muTauFilter = TopLeptonTauFilter {
   InputTag Elecsrc            = pixelMatchGsfElectrons
 
 }
+
+sequence topLeptonTauMuTau = { muTauFilter }
+sequence topLeptonTauETau = { eTauFilter }

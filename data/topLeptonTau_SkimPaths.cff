@@ -1,0 +1,4 @@
+
+include "TopQuarkAnalysis/TopSkimming/data/topLeptonTau_Sequences.cff"
+
+path topLeptonTauPath = { topLeptonTauFilter }
