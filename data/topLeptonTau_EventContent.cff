@@ -3,11 +3,27 @@ block topLeptonTauEventContent = {
   }
 }
 
-block topLeptonTauEventSelection = {
+block topLeptonTauETauEventSelection = {
   untracked PSet SelectEvents = {
       vstring SelectEvents = {
-        "topLeptonTauPath"
+        "topLeptonTauETauPath"
       }
   }
 }
 
+block topLeptonTauMuTauEventSelection = {
+  untracked PSet SelectEvents = {
+      vstring SelectEvents = {
+        "topLeptonTauMuTauPath"
+      }
+  }
+}
+
+block topLeptonTauEventSelection = {
+  untracked PSet SelectEvents = {
+      vstring SelectEvents = {
+        "topLeptonTauETauPath",
+        "topLeptonTauMuTauPath"
+      }
+  }
+}
