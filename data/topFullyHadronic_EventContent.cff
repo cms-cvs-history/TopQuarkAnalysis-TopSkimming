@@ -1,0 +1,20 @@
+block topFullyHadronicEventContent = {
+    untracked vstring outputCommands = {
+    }
+}
+
+block topFullyHadronicJetsEventSelection = {
+    untracked PSet SelectEvents = {
+       vstring SelectEvents = {
+           "topFullyHadronicJetsPath"
+       }
+    }
+}
+
+block topFullyHadronicBJetsEventSelection = {
+    untracked PSet SelectEvents = {
+       vstring SelectEvents = {
+           "topFullyHadronicBJetsPath"
+       }
+    }
+}

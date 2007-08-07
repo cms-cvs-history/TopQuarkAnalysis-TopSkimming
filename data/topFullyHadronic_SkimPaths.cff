@@ -1,0 +1,3 @@
+include "TopQuarkAnalysis/TopSkimming/data/topFullyHadronic_Sequences.cff"
+path topFullyHadronicJetsPath  = { topFullyHadronicJets  }
+path topFullyHadronicBJetsPath = { topFullyHadronicBJets }
