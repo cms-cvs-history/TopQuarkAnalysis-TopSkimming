@@ -1,0 +1,21 @@
+include "Configuration/EventContent/data/EventContent.cff"
+include "TopQuarkAnalysis/TopSkimming/data/topLeptonTauEventContent.cff"
+
+
+# add AOD on top of topLeptonTauEventContent
+block AODSIMTopLeptonTauEventContent = {
+  untracked vstring outputCommands = { 
+  }
+}
+replace AODSIMTopLeptonTauEventContent.outputCommands += AODSIMEventContent.outputCommands
+replace AODSIMTopLeptonTauEventContent.outputCommands += topLeptonTauEventContent.outputCommands
+
+module topLeptonTauOutputModule = PoolOutputModule {
+  untracked string fileName = "topLeptonTau.root"
+  using AODSIMTopLeptonTauEventContent	
+  using topLeptonTauEventSelection
+  untracked PSet datasets ={
+    untracked string dataTier = "USER"
+    untracked string filterName = "topLeptonTau"
+  }
+}

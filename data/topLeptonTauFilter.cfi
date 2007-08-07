@@ -1,0 +1,45 @@
+
+module eTauFilter = TopLeptonTauFilter {
+
+  untracked bool ElecFilter   = true
+  InputTag Elecsrc            = pixelMatchGsfElectrons
+  untracked int32 NminElec    = 0
+  untracked double ElecPtmin  = 15
+
+  untracked bool TauFilter        = true
+  InputTag Tausrc                 = coneIsolationTauJetTags
+  untracked int32 NminTau         = 1
+  untracked double TauLeadTkPtmin = 15
+
+  untracked bool JetFilter      = true
+  InputTag CaloJetsrc           = iterativeCone5CaloJets
+  untracked int32 NminCaloJet   = 2
+  untracked double CaloJetPtmin = 15
+
+  InputTag Muonsrc           = globalMuons
+  untracked  bool MuonFilter = false    
+
+}
+
+
+module muTauFilter = TopLeptonTauFilter {
+   
+  untracked  bool MuonFilter = true
+  InputTag Muonsrc           = globalMuons
+  untracked int32 NminMuon   = 0
+  untracked double MuonPtmin = 15
+
+  untracked bool TauFilter        = true
+  InputTag Tausrc                 = coneIsolationTauJetTags
+  untracked int32 NminTau         = 1
+  untracked double TauLeadTkPtmin = 15
+
+  untracked bool JetFilter      = true
+  InputTag CaloJetsrc           = iterativeCone5CaloJets
+  untracked int32 NminCaloJet   = 2
+  untracked double CaloJetPtmin = 15
+
+  untracked bool ElecFilter   = flase
+  InputTag Elecsrc            = pixelMatchGsfElectrons
+
+}
