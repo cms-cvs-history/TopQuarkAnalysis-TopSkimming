@@ -18,3 +18,11 @@ block topFullyHadronicBJetsEventSelection = {
        }
     }
 }
+
+block topFullyHadronicEventSelection = {
+    untracked PSet SelectEvents = {
+       vstring SelectEvents = {
+           "topFullyHadronicJetsPath", "topFullyHadronicBJetsPath"
+       }
+    }
+}

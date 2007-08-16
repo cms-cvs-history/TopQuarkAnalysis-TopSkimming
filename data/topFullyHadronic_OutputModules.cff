@@ -1,21 +1,31 @@
 include "TopQuarkAnalysis/TopSkimming/data/topFullyHadronic_AODSIMEventContent.cff"
 
-module topFullyHadronicJetsOutputModule = PoolOutputModule {
-    untracked string fileName = "topFullyHadronicJets.root"
-    using topFullyHadronicAODSIMEventContent	
-    using topFullyHadronicJetsEventSelection
-    untracked PSet datasets ={
-        untracked string dataTier = "USER"
-        untracked string filterName = "topFullyHadronicJets"
-    }
-}
+//module topFullyHadronicJetsOutputModule = PoolOutputModule {
+//    untracked string fileName = "topFullyHadronicJets.root"
+//    using topFullyHadronicAODSIMEventContent	
+//    using topFullyHadronicJetsEventSelection
+//    untracked PSet datasets ={
+//        untracked string dataTier = "USER"
+//        untracked string filterName = "topFullyHadronicJets"
+//    }
+//}
+
+//module topFullyHadronicBJetsOutputModule = PoolOutputModule {
+//    untracked string fileName = "topFullyHadronicBJets.root"
+//    using topFullyHadronicAODSIMEventContent	
+//    using topFullyHadronicBJetsEventSelection
+//    untracked PSet datasets ={
+//        untracked string dataTier = "USER"
+//        untracked string filterName = "topFullyHadronicBJets"
+//    }
+//}
 
 module topFullyHadronicBJetsOutputModule = PoolOutputModule {
-    untracked string fileName = "topFullyHadronicBJets.root"
+    untracked string fileName = "topFullyHadronic.root"
     using topFullyHadronicAODSIMEventContent	
-    using topFullyHadronicBJetsEventSelection
+    using topFullyHadronicEventSelection
     untracked PSet datasets ={
         untracked string dataTier = "USER"
-        untracked string filterName = "topFullyHadronicBJets"
+        untracked string filterName = "topFullyHadronic"
     }
 }
