@@ -1,3 +1,6 @@
+
+include "TopQuarkAnalysis/TopSkimming/data/topFullyHadronic_HLTSequences.cff"
 include "TopQuarkAnalysis/TopSkimming/data/topFullyHadronic_Sequences.cff"
-path topFullyHadronicJetsPath  = { topFullyHadronicJets  }
-path topFullyHadronicBJetsPath = { topFullyHadronicBJets }
+
+path topFullyHadronicJetsPath  = { topFullyHadronicJetsHLT  & topFullyHadronicJets  }
+path topFullyHadronicBJetsPath = { topFullyHadronicBJetsHLT & topFullyHadronicBJets }

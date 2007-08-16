@@ -3,11 +3,18 @@ block topDiLeptonEventContent = {
   }
 }
 
-block topDiLeptonEventSelection = {
+block topDiLeptonMuonXEventSelection = {
   untracked PSet SelectEvents = {
       vstring SelectEvents = {
-        "topDiLeptonPath"
+        "topDiLeptonMuonXPath"
       }
   }
 }
 
+block topDiLepton2ElectronEventSelection = {
+  untracked PSet SelectEvents = {
+      vstring SelectEvents = {
+        "topDiLepton2ElectronPath"
+      }
+  }
+}

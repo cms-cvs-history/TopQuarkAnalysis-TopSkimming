@@ -1,4 +1,6 @@
 
+include "TopQuarkAnalysis/TopSkimming/data/topDiLepton_HLTSequences.cff"
 include "TopQuarkAnalysis/TopSkimming/data/topDiLepton_Sequences.cff"
 
-path topDiLeptonPath = { topDiLepton }
+path topDiLeptonMuonXPath     = { topDiLeptonMuonXHLT &      topDiLepton }
+path topDiLepton2ElectronPath = { topFullyHadronicBJetsHLT & topDiLepton }
