@@ -1,46 +1,50 @@
 
 module eTauFilter = TopLeptonTauFilter {
 
-  untracked bool ElecFilter   = true
-  InputTag Elecsrc            = pixelMatchGsfElectrons
-  untracked int32 NminElec    = 0
-  untracked double ElecPtmin  = 15
+  bool ElecFilter       = true
+  InputTag Elecsrc      = pixelMatchGsfElectrons
+  int32 NminElec        = 0
+  double ElecPtmin      = 15
 
-  untracked bool TauFilter        = true
-  InputTag Tausrc                 = coneIsolationTauJetTags
-  untracked int32 NminTau         = 1
-  untracked double TauLeadTkPtmin = 15
+  bool TauFilter        = true
+  InputTag Tausrc       = coneIsolationTauJetTags
+  int32 NminTau         = 1
+  double TauLeadTkPtmin = 15
 
-  untracked bool JetFilter      = true
-  InputTag CaloJetsrc           = iterativeCone5CaloJets
-  untracked int32 NminCaloJet   = 2
-  untracked double CaloJetPtmin = 15
+  bool JetFilter        = true
+  InputTag CaloJetsrc   = iterativeCone5CaloJets
+  int32 NminCaloJet     = 2
+  double CaloJetPtmin   = 15
 
-  InputTag Muonsrc           = globalMuons
-  untracked  bool MuonFilter = false    
+  bool MuonFilter       = false    
+  InputTag Muonsrc      = globalMuons
+  int32 NminMuon        = 0
+  double MuonPtmin      = 15
 
 }
 
 
 module muTauFilter = TopLeptonTauFilter {
    
-  untracked  bool MuonFilter = true
-  InputTag Muonsrc           = globalMuons
-  untracked int32 NminMuon   = 0
-  untracked double MuonPtmin = 15
+  bool MuonFilter       = true
+  InputTag Muonsrc      = globalMuons
+  int32 NminMuon        = 0
+  double MuonPtmin      = 15
 
-  untracked bool TauFilter        = true
-  InputTag Tausrc                 = coneIsolationTauJetTags
-  untracked int32 NminTau         = 1
-  untracked double TauLeadTkPtmin = 15
+  bool TauFilter        = true
+  InputTag Tausrc       = coneIsolationTauJetTags
+  int32 NminTau         = 1
+  double TauLeadTkPtmin = 15
 
-  untracked bool JetFilter      = true
-  InputTag CaloJetsrc           = iterativeCone5CaloJets
-  untracked int32 NminCaloJet   = 2
-  untracked double CaloJetPtmin = 15
+  bool JetFilter        = true
+  InputTag CaloJetsrc   = iterativeCone5CaloJets
+  int32 NminCaloJet     = 2
+  double CaloJetPtmin   = 15
 
-  untracked bool ElecFilter   = flase
-  InputTag Elecsrc            = pixelMatchGsfElectrons
+  bool ElecFilter       = false
+  InputTag Elecsrc      = pixelMatchGsfElectrons
+  int32 NminElec        = 0
+  double ElecPtmin      = 15
 
 }
 
