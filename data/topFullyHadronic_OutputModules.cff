@@ -20,7 +20,7 @@ include "TopQuarkAnalysis/TopSkimming/data/topFullyHadronic_AODSIMEventContent.c
 //    }
 //}
 
-module topFullyHadronicBJetsOutputModule = PoolOutputModule {
+module topFullyHadronicOutputModule = PoolOutputModule {
     untracked string fileName = "topFullyHadronic.root"
     using topFullyHadronicAODSIMEventContent	
     using topFullyHadronicEventSelection
