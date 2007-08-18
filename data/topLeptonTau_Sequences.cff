@@ -17,7 +17,7 @@ module eTauFilter = TopLeptonTauFilter {
   double CaloJetPtmin   = 15
 
   bool MuonFilter       = false    
-  InputTag Muonsrc      = globalMuons
+  InputTag Muonsrc      = muons
   int32 NminMuon        = 0
   double MuonPtmin      = 15
 
@@ -27,7 +27,7 @@ module eTauFilter = TopLeptonTauFilter {
 module muTauFilter = TopLeptonTauFilter {
    
   bool MuonFilter       = true
-  InputTag Muonsrc      = globalMuons
+  InputTag Muonsrc      = muons
   int32 NminMuon        = 0
   double MuonPtmin      = 15
 
