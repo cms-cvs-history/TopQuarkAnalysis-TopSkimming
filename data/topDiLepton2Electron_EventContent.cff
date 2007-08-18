@@ -1,0 +1,14 @@
+
+block topDiLepton2ElectronEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+
+block topDiLepton2ElectronEventSelection = {
+  untracked PSet SelectEvents = {
+      vstring SelectEvents = {
+        "topDiLepton2ElectronPath"
+      }
+  }
+}

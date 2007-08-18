@@ -1,0 +1,5 @@
+
+include "TopQuarkAnalysis/TopSkimming/data/topDiLeptonMuonX_HLTSequences.cff"
+include "TopQuarkAnalysis/TopSkimming/data/topDiLeptonMuonX_Sequences.cff"
+
+path topDiLeptonMuonXPath     = { topDiLeptonMuonXHLT & topDiLeptonMuonX }
