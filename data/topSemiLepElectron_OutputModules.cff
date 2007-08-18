@@ -1,0 +1,32 @@
+
+include "TopQuarkAnalysis/TopSkimming/data/topSemiLepElectron_AODSIMEventContent.cff"
+
+module topSemiLepElectronOutputModule = PoolOutputModule {
+  untracked string fileName = "topSemiLepElectron.root"
+  using topSemiLepElectronAODSIMEventContent
+  using topSemiLepElectronPlus1JetEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "topSemiLepElectron"
+  }
+}
+
+//module topSemiLepElectronPlus1JetOutputModule = PoolOutputModule {
+//  untracked string fileName = "topSemiLepElectronPlus1Jet.root"
+//  using topSemiLepElectronAODSIMEventContent
+//  using topSemiLepElectronPlus1JetEventSelection
+//  untracked PSet datasets = {
+//    untracked string dataTier = "USER"
+//    untracked string filterName = "topSemiLepElectronPlus1Jet"
+//  }
+//}
+
+//module topSemiLepElectronPlus2JetsOutputModule = PoolOutputModule {
+//  untracked string fileName = "topSemiLepElectronPlus2Jets.root"
+//  using topSemiLepElectronAODSIMEventContent
+//  using topSemiLepElectronPlus2JetsEventSelection
+//  untracked PSet datasets = {
+//    untracked string dataTier = "USER"
+//    untracked string filterName = "topSemiLepElectronPlus2Jets"
+//  }
+//}

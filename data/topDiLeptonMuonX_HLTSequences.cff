@@ -4,8 +4,3 @@ replace topDiLeptonMuonXHLT.HLTPaths = {
   "HLT2MuonNonIso",
   "HLTXElectronMuonRelaxed"
 }
-
-module topDiLepton2ElectronHLT = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-replace topDiLepton2ElectronHLT.HLTPaths = {
-  "HLT2ElectronRelaxed"
-}
