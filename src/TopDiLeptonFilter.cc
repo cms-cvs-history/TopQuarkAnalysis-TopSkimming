@@ -1,6 +1,6 @@
 // Original Author:  Dmytro Kovalskyi, UCSB
-// $Id: TopDiLeptonFilter.cc,v 1.1 2007/07/31 03:25:14 dmytro Exp $
-#include "TopQuarkAnalysis/TopSkimming/plugins/TopDiLeptonFilter.h"
+// $Id: TopDiLeptonFilter.cc,v 1.1.2.2 2007/07/31 06:42:17 dmytro Exp $
+#include "TopQuarkAnalysis/TopSkimming/interface/TopDiLeptonFilter.h"
 #include "DataFormats/MuonReco/interface/Muon.h"
 #include "DataFormats/EgammaCandidates/interface/PixelMatchGsfElectron.h"
 #include "FWCore/Framework/interface/Frameworkfwd.h"
@@ -37,8 +37,4 @@ bool TopDiLeptonFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup
    else
      return false;
 }
-
-//define this as a plug-in
-DEFINE_FWK_MODULE(TopDiLeptonFilter);
-   
 

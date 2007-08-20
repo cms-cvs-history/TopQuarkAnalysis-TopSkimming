@@ -6,7 +6,7 @@
 #include "DataFormats/JetReco/interface/Jet.h"
 #include "DataFormats/BTauReco/interface/JetTag.h"
 #include "DataFormats/JetReco/interface/CaloJetCollection.h"
-#include "TopQuarkAnalysis/TopSkimming/plugins/JetTagCountFilter.h"
+#include "TopQuarkAnalysis/TopSkimming/interface/JetTagCountFilter.h"
 
 // --------------------------------------------------------------------------------
 
@@ -45,6 +45,3 @@ JetTagCountFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
     return true;
 }
 
-// --------------------------------------------------------------------------------
-
-DEFINE_FWK_MODULE(JetTagCountFilter);
