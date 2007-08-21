@@ -1,6 +1,5 @@
 
 module topSemiLepElectronHLT = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 replace topSemiLepElectronHLT.HLTPaths = {
-  "HLT1Electron",
   "HLT1ElectronRelaxed"
 }   
