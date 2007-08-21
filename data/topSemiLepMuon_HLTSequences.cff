@@ -1,6 +1,5 @@
 
 module topSemiLepMuonHLT = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 replace topSemiLepMuonHLT.HLTPaths = {
-  "HLT1MuonIso",
   "HLT1MuonNonIso"
 }   

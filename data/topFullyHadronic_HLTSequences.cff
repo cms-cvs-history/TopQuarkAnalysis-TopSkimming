@@ -13,15 +13,5 @@ replace topFullyHadronicBJetsHLT.HLTPaths = {
   "HLTB1Jet",
   "HLTB2Jet",
   "HLTB3Jet",
-  "HLTB4Jet",
-  "HLTBHT",
-  "HLTB1JetMu",
-  "HLTB2JetMu",
-  "HLTB3JetMu",
-  "HLTB4JetMu",
-  "HLTBHTMu",
-  "HLTBJPsiMuMu",
-  "HLTXMuonBJet",
-  "HLTXMuonBJetSoftMuon",
-  "HLTXElectronBJet"
+  "HLTB4Jet"
 }
