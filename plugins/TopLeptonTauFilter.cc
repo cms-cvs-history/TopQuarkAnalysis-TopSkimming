@@ -5,8 +5,8 @@
  * default eta thresholds (lepton and jets) set to 3
  * At least two leptons and two jets present for each channel
  *
- * $Date: 2007/09/13 20:04:24 $
- * $Revision: 1.9 $
+ * $Date: 2007/08/09 19:28:24 $
+ * $Revision: 1.3 $
  *
  * \author Michele Gallinaro and Nuno Almeida - LIP
  *
@@ -26,18 +26,16 @@
 #include "TopQuarkAnalysis/TopSkimming/plugins/TopLeptonTauFilter.h"
 
 //electron includes
-#include "DataFormats/EgammaCandidates/interface/PixelMatchGsfElectronFwd.h"
+#include "DataFormats/EgammaCandidates/interface/PixelMatchGsfElectron.h"
 
 //muon includes
-#include "DataFormats/MuonReco/interface/MuonFwd.h"
 #include "DataFormats/MuonReco/interface/Muon.h"
 //tau includes
-#include "DataFormats/TauReco/interface/BaseTau.h"
+#include "DataFormats/TauReco/interface/Tau.h"
 //jet includes
 #include "DataFormats/JetReco/interface/CaloJet.h"
 #include "DataFormats/METReco/interface/CaloMETCollection.h"
 
-#include "DataFormats/TrackReco/interface/Track.h"
 
 using namespace edm;
 using namespace std;
@@ -157,15 +155,15 @@ bool TopLeptonTauFilter::muonFilter( edm::Event& iEvent, const edm::EventSetup
 bool TopLeptonTauFilter::tauFilter( edm::Event& iEvent, const edm::EventSetup
 & iSetup ){
 
-  Handle<BaseTauCollection> TauHandle;
+  Handle<TauCollection> TauHandle;
   iEvent.getByLabel(Tausrc_,TauHandle);
-  const BaseTauCollection& myTauCollection=*(TauHandle.product());
+  const TauCollection& myTauCollection=*(TauHandle.product());
   if ( myTauCollection.empty() && NminTau_!=0 ) return false;
   
   int nTau = 0;
-  for(BaseTauCollection::const_iterator it =myTauCollection.begin();it !=myTauCollection.end();it++)
+  for(TauCollection::const_iterator it =myTauCollection.begin();it !=myTauCollection.end();it++)
     {
-      TrackRef theLeadTk = it->leadTrack();
+      TrackRef theLeadTk = it->getLeadingTrack();
       if(!theLeadTk) {}
       else{
         double leadTkPt  = (*theLeadTk).pt();
