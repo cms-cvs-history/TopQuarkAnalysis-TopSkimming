@@ -5,7 +5,7 @@ module topSemiLepMuonOutputModule = PoolOutputModule {
   untracked string fileName = "topSemiLepMuon.root"
   using topSemiLepMuonAODSIMEventContent
   using topSemiLepMuonPlus1JetEventSelection
-  untracked PSet datasets = {
+  untracked PSet dataset = {
     untracked string dataTier = "USER"
     untracked string filterName = "topSemiLepMuon"
   }
@@ -15,7 +15,7 @@ module topSemiLepMuonOutputModule = PoolOutputModule {
 //  untracked string fileName = "topSemiLepMuonPlus1Jet.root"
 //  using topSemiLepMuonAODSIMEventContent
 //  using topSemiLepMuonPlus1JetEventSelection
-//  untracked PSet datasets = {
+//  untracked PSet dataset = {
 //    untracked string dataTier = "USER"
 //    untracked string filterName = "topSemiLepMuonPlus1Jet"
 //  }
@@ -25,7 +25,7 @@ module topSemiLepMuonOutputModule = PoolOutputModule {
 //  untracked string fileName = "topSemiLepMuonPlus2Jets.root"
 //  using topSemiLepMuonAODSIMEventContent
 //  using topSemiLepMuonPlus2JetsEventSelection
-//  untracked PSet datasets = {
+//  untracked PSet dataset = {
 //    untracked string dataTier = "USER"
 //    untracked string filterName = "topSemiLepMuonPlus2Jets"
 //  }

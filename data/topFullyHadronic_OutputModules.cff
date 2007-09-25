@@ -4,7 +4,7 @@ include "TopQuarkAnalysis/TopSkimming/data/topFullyHadronic_AODSIMEventContent.c
 //    untracked string fileName = "topFullyHadronicJets.root"
 //    using topFullyHadronicAODSIMEventContent	
 //    using topFullyHadronicJetsEventSelection
-//    untracked PSet datasets ={
+//    untracked PSet dataset ={
 //        untracked string dataTier = "USER"
 //        untracked string filterName = "topFullyHadronicJets"
 //    }
@@ -14,7 +14,7 @@ include "TopQuarkAnalysis/TopSkimming/data/topFullyHadronic_AODSIMEventContent.c
 //    untracked string fileName = "topFullyHadronicBJets.root"
 //    using topFullyHadronicAODSIMEventContent	
 //    using topFullyHadronicBJetsEventSelection
-//    untracked PSet datasets ={
+//    untracked PSet dataset ={
 //        untracked string dataTier = "USER"
 //        untracked string filterName = "topFullyHadronicBJets"
 //    }
@@ -24,7 +24,7 @@ module topFullyHadronicOutputModule = PoolOutputModule {
     untracked string fileName = "topFullyHadronic.root"
     using topFullyHadronicAODSIMEventContent	
     using topFullyHadronicEventSelection
-    untracked PSet datasets ={
+    untracked PSet dataset ={
         untracked string dataTier = "USER"
         untracked string filterName = "topFullyHadronic"
     }

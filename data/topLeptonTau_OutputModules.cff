@@ -5,7 +5,7 @@ module topLeptonTauETauOutputModule = PoolOutputModule {
   untracked string fileName = "topLeptonTauETau.root"
   using topLeptonTauAODSIMEventContent
   using topLeptonTauETauEventSelection
-  untracked PSet datasets ={
+  untracked PSet dataset ={
     untracked string dataTier = "USER"
     untracked string filterName = "topLeptonTauETau"
   }
@@ -15,7 +15,7 @@ module topLeptonTauMuTauOutputModule = PoolOutputModule {
   untracked string fileName = "topLeptonTauMuTau.root"
   using topLeptonTauAODSIMEventContent
   using topLeptonTauMuTauEventSelection
-  untracked PSet datasets ={
+  untracked PSet dataset ={
     untracked string dataTier = "USER"
     untracked string filterName = "topLeptonTauMuTau"
   }
@@ -25,7 +25,7 @@ module topLeptonTauOutputModule = PoolOutputModule {
   untracked string fileName = "topLeptonTau.root"
   using topLeptonTauAODSIMEventContent
   using topLeptonTauEventSelection
-  untracked PSet datasets ={
+  untracked PSet dataset ={
     untracked string dataTier = "USER"
     untracked string filterName = "topLeptonTau"
   }

@@ -5,7 +5,7 @@ module topDiLepton2ElectronOutputModule = PoolOutputModule {
   untracked string fileName = "topDiLepton2Electron.root"
   using topDiLepton2ElectronAODSIMEventContent
   using topDiLepton2ElectronEventSelection
-  untracked PSet datasets ={
+  untracked PSet dataset ={
     untracked string dataTier = "USER"
     untracked string filterName = "topDiLepton2Electron"
   }

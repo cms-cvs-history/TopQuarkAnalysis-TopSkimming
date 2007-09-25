@@ -5,7 +5,7 @@ module topSemiLepElectronOutputModule = PoolOutputModule {
   untracked string fileName = "topSemiLepElectron.root"
   using topSemiLepElectronAODSIMEventContent
   using topSemiLepElectronPlus1JetEventSelection
-  untracked PSet datasets = {
+  untracked PSet dataset = {
     untracked string dataTier = "USER"
     untracked string filterName = "topSemiLepElectron"
   }
@@ -15,7 +15,7 @@ module topSemiLepElectronOutputModule = PoolOutputModule {
 //  untracked string fileName = "topSemiLepElectronPlus1Jet.root"
 //  using topSemiLepElectronAODSIMEventContent
 //  using topSemiLepElectronPlus1JetEventSelection
-//  untracked PSet datasets = {
+//  untracked PSet dataset = {
 //    untracked string dataTier = "USER"
 //    untracked string filterName = "topSemiLepElectronPlus1Jet"
 //  }
@@ -25,7 +25,7 @@ module topSemiLepElectronOutputModule = PoolOutputModule {
 //  untracked string fileName = "topSemiLepElectronPlus2Jets.root"
 //  using topSemiLepElectronAODSIMEventContent
 //  using topSemiLepElectronPlus2JetsEventSelection
-//  untracked PSet datasets = {
+//  untracked PSet dataset = {
 //    untracked string dataTier = "USER"
 //    untracked string filterName = "topSemiLepElectronPlus2Jets"
 //  }
