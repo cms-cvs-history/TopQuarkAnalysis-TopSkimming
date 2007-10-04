@@ -1,12 +1,1 @@
-
-include "TopQuarkAnalysis/TopSkimming/data/topDiLepton2Electron_AODSIMEventContent.cff"
-
-module topDiLepton2ElectronOutputModule = PoolOutputModule {
-  untracked string fileName = "topDiLepton2Electron.root"
-  using topDiLepton2ElectronAODSIMEventContent
-  using topDiLepton2ElectronEventSelection
-  untracked PSet dataset ={
-    untracked string dataTier = "USER"
-    untracked string filterName = "topDiLepton2Electron"
-  }
-}
+include "TopQuarkAnalysis/TopSkimming/data/topDiLepton2ElectronOutputModule.cfi"
