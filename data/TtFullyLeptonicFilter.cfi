@@ -1,15 +1,21 @@
 module ttFullyLeptonicFilter = TtDecayChannelFilter
 {
-	  InputTag src = genParticleCandidates
+  InputTag src = genParticleCandidates
 
-	#---------------------------------------
-	# allowed families for first (channel_1)
-	# and/or second (channel_2) lepton. In 
-        # order: (elec,muon,tau)
-	#---------------------------------------
- 	  vint32 channel_1 = {1,1,0}
- 	  vint32 channel_2 = {1,1,0}
+  #---------------------------------------
+  # select channels of consideration in
+  # order: (elec,muon,tau)
+  #---------------------------------------
+  vint32 channel_1 = {1,1,0}
+  vint32 channel_2 = {1,1,0}
 
-	# invert selection?
- 	  bool   invert = false
+ #---------------------------------------
+ # allowed decay channels for taus.
+ # In order: (leptonic, one prong, three prong)
+ #---------------------------------------
+  vint32 tauDecays = {0,1,1}
+
+ #invert selection?
+  bool   invert = false
 }
+
