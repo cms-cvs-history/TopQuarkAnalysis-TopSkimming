@@ -6,7 +6,7 @@
 //  double ptMin = 20.
 //}
 
-module electronFilter = PtMinPixelMatchGsfElectronCountFilter {
+module electronFilter = PtMinGsfElectronCountFilter {
   InputTag src = pixelMatchGsfElectrons
   uint32 minNumber = 1
   double ptMin = 20.
