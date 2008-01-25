@@ -1,6 +1,6 @@
 module ttSemiLeptonicFilter = TtDecayChannelFilter
 {
-   InputTag src = genParticleCandidates
+   InputTag src = genParticles
 
  #---------------------------------------
  # allowed families for first (channel_1)
