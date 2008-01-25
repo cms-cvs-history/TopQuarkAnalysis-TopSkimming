@@ -1,6 +1,6 @@
 module ttFullyLeptonicFilter = TtDecayChannelFilter
 {
-  InputTag src = genParticleCandidates
+  InputTag src = genParticles
 
   #---------------------------------------
   # select channels of consideration in
