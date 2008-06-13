@@ -1,5 +1,0 @@
-
-module topSemiLepElectronHLT = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-replace topSemiLepElectronHLT.HLTPaths = {
-  "HLT_IsoEle18_L1R"
-}   
