@@ -1,7 +1,7 @@
 
 module topDiLeptonMuonXHLT = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 replace topDiLeptonMuonXHLT.HLTPaths = {
-  "HLT1MuonNonIso",
-  "HLT2MuonNonIso",
-  "HLTXElectronMuonRelaxed"
+  "HLT_Mu15_L1Mu7",
+  "HLT_DoubleMu3",
+  "HLT_IsoEle10_Mu10_L1R"
 }
