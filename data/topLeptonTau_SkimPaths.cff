@@ -1,6 +1,0 @@
-
-include "TopQuarkAnalysis/TopSkimming/data/topLeptonTau_Sequences.cff"
-
-path topLeptonTauMuTauPath = { topLeptonTauMuTau }
-path topLeptonTauETauPath = { topLeptonTauETau }
-
