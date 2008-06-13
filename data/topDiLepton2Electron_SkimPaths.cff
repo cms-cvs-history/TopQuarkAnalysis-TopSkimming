@@ -1,5 +1,0 @@
-
-include "TopQuarkAnalysis/TopSkimming/data/topDiLepton2Electron_HLTSequences.cff"
-include "TopQuarkAnalysis/TopSkimming/data/topDiLepton2Electron_Sequences.cff"
-
-path topDiLepton2ElectronPath = { topDiLepton2ElectronHLT & topDiLepton2Electron }
