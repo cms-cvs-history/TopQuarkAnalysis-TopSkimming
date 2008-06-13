@@ -1,6 +1,0 @@
-
-module topDiLepton2ElectronHLT = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-replace topDiLepton2ElectronHLT.HLTPaths = {
-  "HLT_IsoEle18_L1R",
-  "HLT_DoubleIsoEle12_L1R"
-}
