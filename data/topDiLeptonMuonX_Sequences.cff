@@ -1,8 +1,0 @@
-
-module topDiLeptonMuonXFilter = TopDiLeptonFilter {
-   InputTag muonCollection = muons
-   InputTag electronCollection = pixelMatchGsfElectrons
-   double ptThreshold = 20
-}
-
-sequence topDiLeptonMuonX = { topDiLeptonMuonXFilter }
