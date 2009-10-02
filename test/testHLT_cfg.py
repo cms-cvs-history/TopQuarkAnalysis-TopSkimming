@@ -13,14 +13,21 @@ process.load('FWCore/MessageService/MessageLogger_cfi')
 process.load('Configuration/EventContent/EventContent_cff')
 process.load("TopQuarkAnalysis.TopSkimming.topMuSkimFilterOctoberX_cff")
 process.load("CMS2.NtupleMaker.hltMaker_cfi")
+process.load("TopQuarkAnalysis.TopSkimming.topSkimValidation_cfi")
 
 process.options = cms.untracked.PSet(
     Rethrow = cms.untracked.vstring('ProductNotFound')
 )
 
 process.source = cms.Source("PoolSource",
-                            fileNames=cms.untracked.vstring("/store/mc/Summer09/InclusiveMu5_Pt50/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v1/0000/729B4827-2FAA-DE11-86B1-003048678BB8.root")
-#                            fileNames = cms.untracked.vstring('dcap://cmsdca3.fnal.gov:24144/pnfs/fnal.gov/usr/cms/WAX/11/store/relval/CMSSW_3_1_3/RelValProdTTbar/GEN-SIM-RECO/MC_31X_V3-v1/0003/86B57E41-F2A9-DE11-BE4D-001D09F2905B.root')
+                            fileNames=cms.untracked.vstring('/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FCB993DE-86AC-DE11-88C5-002481DE4A28.root',
+'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FC1AF249-8EAC-DE11-A722-0025B3268576.root',	
+'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FADB2F4F-87AC-DE11-A31A-001E4F32F7B6.root',	
+'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FAC5839F-85AC-DE11-B7E8-001E4F33E1FD.root',	
+'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FAB06DAB-86AC-DE11-95F9-0025B3268576.root',	
+'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FA08484A-C4AC-DE11-91DC-0025B3268672.root',	
+'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/F8D64CEE-86AC-DE11-AE4D-001E4F339C72.root',	
+'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/F819FA07-82AC-DE11-A2B7-001E4F2ACF64.root')
                            )
 # Number of events:
 process.maxEvents = cms.untracked.PSet(
@@ -39,13 +46,17 @@ process.EventSelection = cms.PSet(
     )
 )
 
+#process.TFileService = cms.Service("TFileService", 
+#      fileName = cms.string("histosptfiltonly.root")
+#)
+
 
 process.p = cms.Path(process.hlt8e29Maker*process.topMuHLTSeq)
 
 process.output=cms.OutputModule("PoolOutputModule",
                                 process.EventSelection,
                                #process.AODEventContent, #Dump AOD format
-                               fileName=cms.untracked.string('TTbar_AOD_313_IDEAL_skimmed_CMS2.root'),
+                               fileName=cms.untracked.string('TTbarSD_Mu9_HLTPtFilter.root'),
                                 )
 
 
