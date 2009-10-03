@@ -12,7 +12,7 @@ process.load('Configuration/StandardSequences/Services_cff')
 process.load('FWCore/MessageService/MessageLogger_cfi')
 process.load('Configuration/EventContent/EventContent_cff')
 process.load("TopQuarkAnalysis.TopSkimming.topMuSkimFilterOctoberX_cff")
-process.load("CMS2.NtupleMaker.hltMaker_cfi")
+#process.load("CMS2.NtupleMaker.hltMaker_cfi")
 #process.load("OctoberExercise.TopSkimValidation.topSkimValidation_cfi")
 
 process.options = cms.untracked.PSet(
@@ -51,7 +51,7 @@ process.EventSelection = cms.PSet(
 ##)
 
 
-process.p = cms.Path(process.hlt8e29Maker*process.topMuHLTSeq)#*process.topSkimValidation)
+process.p = cms.Path(process.topMuHLTSeq)#*process.topSkimValidation)
 
 process.output=cms.OutputModule("PoolOutputModule",
                                 process.EventSelection,
@@ -60,8 +60,8 @@ process.output=cms.OutputModule("PoolOutputModule",
                                 )
 
 
-process.output.outputCommands = cms.untracked.vstring( 'drop *' )
-process.output.outputCommands.extend(cms.untracked.vstring('keep *_*Maker*_*_TOPSKIM*'))
+##process.output.outputCommands = cms.untracked.vstring( 'drop *' )
+##process.output.outputCommands.extend(cms.untracked.vstring('keep *_*Maker*_*_TOPSKIM*'))
 
 
 
