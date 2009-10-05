@@ -11,9 +11,8 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 1
 process.load('Configuration/StandardSequences/Services_cff')
 process.load('FWCore/MessageService/MessageLogger_cfi')
 process.load('Configuration/EventContent/EventContent_cff')
-process.load("TopQuarkAnalysis.TopSkimming.topMuSkimFilterOctoberX_cff")
-#process.load("CMS2.NtupleMaker.hltMaker_cfi")
-#process.load("OctoberExercise.TopSkimValidation.topSkimValidation_cfi")
+process.load('TopQuarkAnalysis.TopSkimming.topMuSkimFilterOctoberX_cff')
+process.load('TopQuarkAnalysis.TopSkimming.topMuSkimValidationOctoberX_cfi')
 
 process.options = cms.untracked.PSet(
     Rethrow = cms.untracked.vstring('ProductNotFound')
@@ -31,7 +30,7 @@ process.source = cms.Source("PoolSource",
 )
 # Number of events:
 process.maxEvents = cms.untracked.PSet(
-   input = cms.untracked.int32(-1)
+   input = cms.untracked.int32(1000)
    )
 
 
@@ -46,24 +45,13 @@ process.EventSelection = cms.PSet(
     )
 )
 
-##process.TFileService = cms.Service("TFileService", 
-##      fileName = cms.string("SD_Mu9_histos.root")
-##)
-
-
-process.p = cms.Path(process.topMuHLTSeq)#*process.topSkimValidation)
+process.p = cms.Path(process.topMuHLTSeq*process.topMuSkimValidation)
 
 process.output=cms.OutputModule("PoolOutputModule",
                                 process.EventSelection,
-                               #process.AODEventContent, #Dump AOD format
-                               fileName=cms.untracked.string('TTbarSD_Mu9_HLTPtFilter.root'),
+                                process.AODEventContent, #Dump AOD format
+                                fileName=cms.untracked.string('test.root'),
                                 )
-
-
-##process.output.outputCommands = cms.untracked.vstring( 'drop *' )
-##process.output.outputCommands.extend(cms.untracked.vstring('keep *_*Maker*_*_TOPSKIM*'))
-
-
 
 #Run the output path:
 process.outpath = cms.EndPath(process.output)
