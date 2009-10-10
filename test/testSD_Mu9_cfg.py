@@ -49,7 +49,7 @@ process.p = cms.Path(process.topMuHLTSeq*process.topMuSkimValidation)
 
 process.output=cms.OutputModule("PoolOutputModule",
                                 process.EventSelection,
-                                process.AODEventContent, #Dump AOD format
+                                process.AODSIMEventContent, #Dump AOD format
                                 fileName=cms.untracked.string('test.root'),
                                 )
 
