@@ -27,7 +27,7 @@ process.source = cms.Source("PoolSource",
                             )
 # Number of events:
 process.maxEvents = cms.untracked.PSet(
-   input = cms.untracked.int32(100)
+   input = cms.untracked.int32(1000)
    )
 
 
@@ -49,7 +49,7 @@ process.ep = cms.Path(process.topElsSkimValidation)
 
 process.output=cms.OutputModule("PoolOutputModule",
                                 process.EventSelection,
-                                process.AODEventContent, #Dump AOD format
+                                process.AODSIMEventContent, #Dump AOD format
                                 fileName=cms.untracked.string('test.root'),
                                 )
 
