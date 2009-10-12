@@ -8,7 +8,7 @@
 </library>
 
 
-<library file=TopSkimValidation.cc name=TopSkiValidation>
+<library file=TopSkimValidation.cc name=TopSkimValidation>
   <use name=DataFormats/EgammaCandidates>
   <use name=DataFormats/MuonReco>
   <use name=FWCore/Framework>
