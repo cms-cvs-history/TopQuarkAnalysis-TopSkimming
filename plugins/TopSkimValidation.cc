@@ -13,7 +13,7 @@
 //
 // Original Author:  Puneeth Kalavase
 //         Created:  Thu Oct  1 17:22:48 PDT 2009
-// $Id: TopSkimValidation.cc,v 1.2 2009/10/05 03:14:21 kalavase Exp $
+// $Id: TopSkimValidation.cc,v 1.2.2.2 2009/10/06 14:17:53 snaumann Exp $
 //
 //
 
@@ -97,7 +97,11 @@ TopSkimValidation::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
     }
   }
 
-  
+  //count the number of leptons with pt > 20 GeV
+    numPt_ = numPt_ + lepp4s.size();
+
+
+
   //get the Trigger stuff
   iEvent.getByLabel(edm::InputTag("TriggerResults", "", processName_), triggerResultsH_);
    if (! triggerResultsH_.isValid())
@@ -122,9 +126,7 @@ TopSkimValidation::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 
     }
     
-    //count the number of leptons with pt > 20 GeV
-    numPt = numPt + lepp4s.size();
-
+    unsigned int tempCounter = 0;
     //how many reco leptons with pt > 20 are matched to a HLT object?
     for(unsigned int j = 0; j < lepp4s.size(); j++) {
       double mindR = 0.15;
@@ -134,10 +136,22 @@ TopSkimValidation::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 	  mindR = tempdR;
       }//HLT p4 loop
       if(mindR < 0.15) {
-	numPtHLTMatched++;
+	numPtHLTMatched_++;
+	if(tempCounter < 1)
+	  tempCounter++;
 	continue;
       }
     }//lepton p4 loop
+
+
+
+    //now do event level stuff
+    if(lepp4s.size() > 0)
+      numEvtsPt_++;
+    if(lepp4s.size() > 0 && HLTp4s.size() > 0)
+      numEvtsPtHLT_++;
+    if(tempCounter > 0)
+      numEvtsPtHLTMatched_++;
     
 }
 
@@ -151,9 +165,12 @@ void TopSkimValidation::beginJob() {
     throw cms::Exception("HLTMaker::beginRun: config extraction failure with process name " + processName_);
   
   
-  numPt = 0;
-  numPtHLTMatched = 0;
+  numPt_ = 0;
+  numPtHLTMatched_ = 0;
 
+  numEvtsPt_ = 0;
+  numEvtsPtHLT_ = 0;
+  numEvtsPtHLTMatched_ = 0;
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
@@ -161,10 +178,21 @@ void
 TopSkimValidation::endJob() {
   
   std::cout << "Number of RECO " << leptonFlavor_ << " with Pt > " << leptonPtcut_ 
-	    << " is: " << numPt << std::endl;
+	    << " is: " << numPt_ << std::endl;
   std::cout << "Number of HLT Objects with pt > " << HLTPtcut_ << " matched to a RECO " 
 	    << leptonFlavor_ << " with pt > " << leptonPtcut_ << " is: " 
-	    << numPtHLTMatched << std::endl;
+	    << numPtHLTMatched_ << std::endl;
+
+
+  std::cout << "Number of events with at least one RECO " << leptonFlavor_ << " with Pt > " << leptonPtcut_ 
+	    << " is: " << numEvtsPt_ << std::endl;
+  std::cout << "Number of events with at least one RECO " << leptonPtcut_ << " with Pt > " << leptonPtcut_
+	    << " and at least one HLT object with pt > " << HLTPtcut_ << " is: " << numEvtsPtHLT_ << std::endl;
+  std::cout << "Number of events with an HLT Objects with pt > " << HLTPtcut_ << " matched to a RECO " 
+	    << leptonFlavor_ << " with pt > " << leptonPtcut_ << " is: " 
+	    << numEvtsPtHLTMatched_ << std::endl;
+ 
+  
   
 }
 

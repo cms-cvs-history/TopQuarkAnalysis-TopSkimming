@@ -13,7 +13,7 @@
 //
 // Original Author:  Puneeth Kalavase
 //         Created:  Thu Oct  1 17:22:48 PDT 2009
-// $Id: TopSkimValidation.h,v 1.1 2009/10/05 02:52:08 kalavase Exp $
+// $Id: TopSkimValidation.h,v 1.1.2.2 2009/10/06 14:17:53 snaumann Exp $
 //
 //
 
@@ -59,8 +59,15 @@ class TopSkimValidation : public edm::EDAnalyzer {
   edm::Handle<edm::TriggerResults> triggerResultsH_;
   edm::Handle<trigger::TriggerEvent> triggerEventH_;
   HLTConfigProvider hltConfig_;
-  unsigned int numPt; //number of reco leptons with pt > X
-  unsigned int numPtHLTMatched; // number of reco leptons with pt > X matched to a HLT object 
+  
+  unsigned int numPt_; //number of reco leptons with pt > X
+  unsigned int numPtHLTMatched_; // number of reco leptons with pt > X matched to a HLT object 
+
+  //same as above, but Event counters
+  unsigned int numEvtsPt_; //number of reco leptons with pt > X
+  unsigned int numEvtsPtHLT_; //number of reco leptons with pt > X and HLT objects with pt > Y (not necessarily matched objects)
+  unsigned int numEvtsPtHLTMatched_; // number of reco leptons with pt > X matched to a HLT object 
+
   
   //
   std::string processName_;
