@@ -14,20 +14,16 @@ process.load('Configuration/EventContent/EventContent_cff')
 process.load("TopQuarkAnalysis.TopSkimming.topEleSkimFilterOctoberX_cff")
 process.load('TopQuarkAnalysis.TopSkimming.topEleSkimValidationOctoberX_cfi')
 
-
 process.options = cms.untracked.PSet(
     Rethrow = cms.untracked.vstring('ProductNotFound')
 )
 
 process.source = cms.Source("PoolSource",
-                            fileNames=cms.untracked.vstring('/store/mc/Summer09/TTbar/GEN-SIM-RECO/MC_31X_V3_SD_Ele15-v1/0003/A6127C58-F0AB-DE11-89B9-00237DA13C16.root',
-        '/store/mc/Summer09/TTbar/GEN-SIM-RECO/MC_31X_V3_SD_Ele15-v1/0003/A43A086A-F0AB-DE11-863E-00237DA10D06.root',
-        '/store/mc/Summer09/TTbar/GEN-SIM-RECO/MC_31X_V3_SD_Ele15-v1/0003/70FE322B-F2AB-DE11-A39E-00237DA1FD7C.root',
-        '/store/mc/Summer09/TTbar/GEN-SIM-RECO/MC_31X_V3_SD_Ele15-v1/0003/38177E5B-F0AB-DE11-B0E4-001CC4116E30.root')
+                            fileNames=cms.untracked.vstring('/store/mc/Summer09/Zee/GEN-SIM-RECO/MC_31X_V3_SD_Ele15-v1/0003/C62D4337-F1AB-DE11-A96B-0018F3D0970E.root')
                             )
 # Number of events:
 process.maxEvents = cms.untracked.PSet(
-   input = cms.untracked.int32(1000)
+   input = cms.untracked.int32(200)
    )
 
 
@@ -49,7 +45,7 @@ process.ep = cms.Path(process.topElsSkimValidation)
 
 process.output=cms.OutputModule("PoolOutputModule",
                                 process.EventSelection,
-                                process.AODSIMEventContent, #Dump AOD format
+                                process.AODSIMEventContent, #Dump AODSIM format
                                 fileName=cms.untracked.string('test.root'),
                                 )
 

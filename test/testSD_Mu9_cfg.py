@@ -19,18 +19,11 @@ process.options = cms.untracked.PSet(
 )
 
 process.source = cms.Source("PoolSource",
-                            fileNames=cms.untracked.vstring('/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FCB993DE-86AC-DE11-88C5-002481DE4A28.root',
-'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FC1AF249-8EAC-DE11-A722-0025B3268576.root',	
-'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FADB2F4F-87AC-DE11-A31A-001E4F32F7B6.root',	
-'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FAC5839F-85AC-DE11-B7E8-001E4F33E1FD.root',	
-'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FAB06DAB-86AC-DE11-95F9-0025B3268576.root',	
-'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/FA08484A-C4AC-DE11-91DC-0025B3268672.root',	
-'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/F8D64CEE-86AC-DE11-AE4D-001E4F339C72.root',	
-'/store/mc/Summer09/Wmunu/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v2/0000/F819FA07-82AC-DE11-A2B7-001E4F2ACF64.root')
+                            fileNames=cms.untracked.vstring('/store/mc/Summer09/InclusiveMu15/GEN-SIM-RECO/MC_31X_V3_SD_Mu9-v1/0000/003A7526-F6AD-DE11-AA05-0018F3D096CE.root')
 )
 # Number of events:
 process.maxEvents = cms.untracked.PSet(
-   input = cms.untracked.int32(1000)
+   input = cms.untracked.int32(200)
    )
 
 
@@ -45,11 +38,12 @@ process.EventSelection = cms.PSet(
     )
 )
 
-process.p = cms.Path(process.topMuHLTSeq*process.topMuSkimValidation)
+process.p = cms.Path(process.topMuHLTSeq)
+process.ep = cms.EndPath(process.topMuSkimValidation)
 
 process.output=cms.OutputModule("PoolOutputModule",
                                 process.EventSelection,
-                                process.AODSIMEventContent, #Dump AOD format
+                                process.AODSIMEventContent, #Dump AODSIM format
                                 fileName=cms.untracked.string('test.root'),
                                 )
 
